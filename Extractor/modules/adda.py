@@ -1,18 +1,9 @@
 import requests
-import json
-import random
-import uuid
 import time
-import asyncio
-import io
-import aiohttp
-from pyrogram import Client, filters
 import os
-import requests
-from Extractor import app
-from config import PREMIUM_LOGS
+from pyrogram import filters
+from Extractor import app  # your pyrogram client
 
-log_channel = PREMIUM_LOGS
 @app.on_message(filters.command(["adda"]))
 async def adda_command_handler(app, m):
     try:
@@ -21,8 +12,9 @@ async def adda_command_handler(app, m):
         if "*" in ap:
             e, p = ap.split("*")
         else:
-            m.reply_text(" Invalid input. Please send details in the correct format.")
+            await m.reply_text("Invalid input. Please send details in the correct format.")
             return
+        
         url = "https://userapi.adda247.com/login?src=aweb"
         data = {"email": e, "providerName": "email", "sec": p}
         headers = {
@@ -98,12 +90,15 @@ async def adda_command_handler(app, m):
 
             if os.path.getsize(file_name) > 0:
                 end = time.time()
-                elapsed_time = end-start
-                c_text = f"**App Name :** ADDA 247 \n\n BATCH NAME : {package_title}\n\n Elapsed time: {elapsed_time:.1f} seconds \n\n **╾───• JAAT Extractor •───╼**  " 
+                elapsed_time = end - start
+                c_text = (
+                    f"**App Name :** ADDA 247 \n\n"
+                    f"BATCH NAME : {package_title}\n\n"
+                    f"Elapsed time: {elapsed_time:.1f} seconds \n\n"
+                    f"**╾───• SHIVAAY Extractor •───╼**"
+                )
                 await m.reply_document(file_name, caption=c_text)
-                await app.send_document(log_channel, file_name , caption = c_text)
 
-    
             os.remove(file_name)
 
     except requests.exceptions.RequestException as req_err:
