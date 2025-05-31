@@ -1,5 +1,5 @@
 
-IMG = ["https://tinypic.host/images/2025/05/01/file_0000000056486230ad1690c7389017ad.png"]
+IMG = ["https://files.catbox.moe/5csii6.jpg"]
 
 
 # ------------------------------------------------------------ #

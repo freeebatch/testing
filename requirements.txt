@@ -1,6 +1,6 @@
 pyrofork
 aiohttp
-motor
+# motor
 tgcrypto
 aiofiles
 requests
