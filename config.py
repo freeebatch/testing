@@ -20,5 +20,5 @@ CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-100"))
 # ------------------------------------------------
 # MONGO_URL = os.environ.get("MONGO_URL", "mongodb+srvter")
 # # -----------------------------------------------
-# PREMIUM_LOGS = int(os.environ.get("PREMIUM_LOGS", "-100"))
+PREMIUM_LOGS = int(os.environ.get("PREMIUM_LOGS", "-100"))
 
