@@ -1,24 +1,54 @@
+# import re
+# import random
+# from pyrogram import filters
+# from Extractor import app
+# from config import OWNER_ID, SUDO_USERS, CHANNEL_ID, PREMIUM_LOGS
+# from Extractor.core import script
+# from Extractor.core.func import subscribe, chk_user
+# from pyrogram.types import CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton
+# from Extractor.modules.classplus import classplus_txt
+# from Extractor.modules.exampur import exampur_txt
+# from Extractor.modules.appex_v3 import appex_v3_txt
+# from Extractor.modules.khan import khan_login
+# from Extractor.modules.kdlive import kdlive
+# from Extractor.modules.pw import  pw_login
+# from Extractor.modules.careerwill import career_will
+# from Extractor.modules.getappxotp import send_otp
+# from Extractor.modules.findapi import findapis_extract
+# from Extractor.modules.utk import handle_utk_logic
+# from Extractor.modules.iq import handle_iq_logic
+# from Extractor.modules.adda import adda_command_handler
+# log_channel = PREMIUM_LOGS
+
+
+
 import re
 import random
 from pyrogram import filters
 from Extractor import app
-from config import OWNER_ID, SUDO_USERS, CHANNEL_ID, PREMIUM_LOGS
+from config import OWNER_ID, SUDO_USERS, CHANNEL_ID  # Removed PREMIUM_LOGS from import
 from Extractor.core import script
 from Extractor.core.func import subscribe, chk_user
 from pyrogram.types import CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton
+
 from Extractor.modules.classplus import classplus_txt
 from Extractor.modules.exampur import exampur_txt
 from Extractor.modules.appex_v3 import appex_v3_txt
 from Extractor.modules.khan import khan_login
 from Extractor.modules.kdlive import kdlive
-from Extractor.modules.pw import  pw_login
+from Extractor.modules.pw import pw_login
 from Extractor.modules.careerwill import career_will
 from Extractor.modules.getappxotp import send_otp
 from Extractor.modules.findapi import findapis_extract
 from Extractor.modules.utk import handle_utk_logic
 from Extractor.modules.iq import handle_iq_logic
 from Extractor.modules.adda import adda_command_handler
-log_channel = PREMIUM_LOGS
+
+# Removed the premium logs assignment
+# log_channel = PREMIUM_LOGS
+
+# ------------------------------------------------------------------------------- #
+
 # ------------------------------------------------------------------------------- #
 
 
