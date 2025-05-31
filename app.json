@@ -1,46 +1,45 @@
 {
-  "name": "Shivaay",
-  "description": "Telegram Bot using Pyrogram",
-  "repository": "",
+  "name": "Shivaay Telegram Bot",
+  "description": "Telegram Bot using Pyrogram - deploy easily on Heroku",
+  "repository": "https://github.com/Shivaay20005/Cobra-exx-main",
+  "logo": "https://raw.githubusercontent.com/Shivaay20005/Cobra-exx-main/main/logo.png",
+  "keywords": [
+    "telegram",
+    "bot",
+    "pyrogram",
+    "heroku"
+  ],
+  "stack": "heroku-22",
   "env": {
     "API_ID": {
-      "description": "",
+      "description": "Telegram API ID (get it from https://my.telegram.org)",
       "required": true
     },
     "API_HASH": {
-      "description": "",
+      "description": "Telegram API Hash (get it from https://my.telegram.org)",
       "required": true
     },
     "BOT_TOKEN": {
-      "description": "",
+      "description": "Telegram Bot Token (from @BotFather)",
       "required": true
     },
     "BOT_USERNAME": {
-      "description": "",
+      "description": "Bot username (without @)",
       "required": true
     },
     "OWNER_ID": {
-      "description": "",
+      "description": "Your Telegram user ID (bot owner/admin)",
       "required": true
     },
     "SUDO_USERS": {
-      "description": "Comma-separated list of sudo users' IDs",
+      "description": "Comma-separated list of sudo user IDs (optional)",
       "required": false
     },
     "CHANNEL_ID": {
-      "description": "-100",
-      "required": true
-    },
-    "MONGO_URL": {
-      "description": "",
-      "required": true
-    },
-    "PREMIUM_LOGS": {
-      "description": "-100",
+      "description": "Telegram channel ID (usually starts with -100)",
       "required": true
     }
   },
-  "stack": "heroku-22",
   "addons": [],
   "buildpacks": [
     {
