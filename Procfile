@@ -1,2 +1,1 @@
-web: python keep_alive.py
-worker: python -m Extractor
+worker: python bot.py
