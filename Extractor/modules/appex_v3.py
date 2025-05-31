@@ -15,10 +15,6 @@ from base64 import b64decode
 from bs4 import BeautifulSoup
 from concurrent.futures import ThreadPoolExecutor
 import time 
-from config import PREMIUM_LOGS
-
-log_channel = PREMIUM_LOGS
-log_channel2 = PREMIUM_LOGS
 
 def decrypt(enc):
     enc = b64decode(enc.split(':')[0])
